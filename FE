@@ -1,0 +1,665 @@
+local TwistedMurdererGUI = Instance.new("ScreenGui")
+local Opening = Instance.new("Frame")
+local OpenGui = Instance.new("TextButton")
+local TMGui = Instance.new("Frame")
+local TMGUICRED = Instance.new("TextLabel")
+local CLOSE = Instance.new("TextButton")
+local PlayersTab = Instance.new("Frame")
+local INFO = Instance.new("TextLabel")
+local UnCloak = Instance.new("TextButton")
+local UnCloakAll = Instance.new("TextButton")
+local RRadios = Instance.new("TextButton")
+local CrashS = Instance.new("TextButton")
+local God = Instance.new("TextButton")
+local RemoveAnti = Instance.new("TextButton")
+local STOPALL = Instance.new("TextButton")
+local STOP = Instance.new("TextButton")
+local DetectRoles = Instance.new("TextButton")
+local PlayerName = Instance.new("TextBox")
+local PLAYALL = Instance.new("TextButton")
+local PLAY = Instance.new("TextButton")
+local MUSICid = Instance.new("TextBox")
+local KillOthers = Instance.new("TextButton")
+local KillAll = Instance.new("TextButton")
+local Kill = Instance.new("TextButton")
+local LoopKill = Instance.new("TextButton")
+local ForceKevlar = Instance.new("TextButton")
+local CloakAll = Instance.new("TextButton")
+local Cloak = Instance.new("TextButton")
+local ToolName = Instance.new("TextBox")
+local SaveTool = Instance.new("TextButton")
+local StayL = Instance.new("TextButton")
+ 
+-- Properties
+ 
+TwistedMurdererGUI.Name = "TwistedMurdererGUI"
+TwistedMurdererGUI.Parent = game.CoreGui
+ 
+Opening.Name = "Opening"
+Opening.Parent = TwistedMurdererGUI
+Opening.Active = true
+Opening.BackgroundColor3 = Color3.new(1, 1, 1)
+Opening.Size = UDim2.new(0, 89, 0, 27)
+ 
+OpenGui.Name = "OpenGui"
+OpenGui.Parent = Opening
+OpenGui.BackgroundColor3 = Color3.new(0, 0, 0)
+OpenGui.BackgroundTransparency = 1
+OpenGui.BorderColor3 = Color3.new(0, 0, 0)
+OpenGui.Size = UDim2.new(0, 71, 0, 27)
+OpenGui.Font = Enum.Font.SourceSans
+OpenGui.FontSize = Enum.FontSize.Size18
+OpenGui.Text = "Open"
+OpenGui.TextColor3 = Color3.new(0, 0, 0)
+OpenGui.TextSize = 18
+ 
+TMGui.Name = "TMGui"
+TMGui.Parent = TwistedMurdererGUI
+TMGui.Active = true
+TMGui.BackgroundColor3 = Color3.new(1, 1, 1)
+TMGui.Draggable = true
+TMGui.Position = UDim2.new(0, 18, 0, 35)
+TMGui.Size = UDim2.new(0, 264, 0, 264)
+TMGui.Visible = false
+ 
+TMGUICRED.Name = "TMGUI CRED"
+TMGUICRED.Parent = TMGui
+TMGUICRED.BackgroundColor3 = Color3.new(1, 1, 1)
+TMGUICRED.BackgroundTransparency = 1
+TMGUICRED.BorderColor3 = Color3.new(0, 0, 0)
+TMGUICRED.Size = UDim2.new(0, 240, 0, 18)
+TMGUICRED.Font = Enum.Font.SourceSans
+TMGUICRED.FontSize = Enum.FontSize.Size18
+TMGUICRED.Text = "Twisted Murderer Gui - MADE BY Sock Tan"
+TMGUICRED.TextColor3 = Color3.new(0, 0, 0)
+TMGUICRED.TextSize = 15
+ 
+CLOSE.Name = "CLOSE"
+CLOSE.Parent = TMGui
+CLOSE.BackgroundColor3 = Color3.new(0, 0, 0)
+CLOSE.BackgroundTransparency = 0.89999997615814
+CLOSE.Position = UDim2.new(0, 243, 0, 0)
+CLOSE.Size = UDim2.new(0, 21, 0, 17)
+CLOSE.Font = Enum.Font.SourceSans
+CLOSE.FontSize = Enum.FontSize.Size24
+CLOSE.Text = "X"
+CLOSE.TextColor3 = Color3.new(1, 0, 0)
+CLOSE.TextSize = 20
+ 
+PlayersTab.Name = "PlayersTab"
+PlayersTab.Parent = TMGui
+PlayersTab.Active = true
+PlayersTab.BackgroundColor3 = Color3.new(1, 1, 1)
+PlayersTab.Position = UDim2.new(0, 0, 0, 22)
+PlayersTab.Size = UDim2.new(0, 264, 0, 242)
+ 
+INFO.Name = "INFO"
+INFO.Parent = PlayersTab
+INFO.BackgroundColor3 = Color3.new(1, 1, 1)
+INFO.BorderColor3 = Color3.new(1, 1, 1)
+INFO.Position = UDim2.new(0, 87, 0, 196)
+INFO.Size = UDim2.new(0, 146, 0, 13)
+INFO.Font = Enum.Font.SourceSans
+INFO.FontSize = Enum.FontSize.Size14
+INFO.Text = "<-- Spam this heaps to crash."
+INFO.TextSize = 14
+ 
+UnCloak.Name = "UnCloak"
+UnCloak.Parent = PlayersTab
+UnCloak.BackgroundColor3 = Color3.new(1, 1, 1)
+UnCloak.Position = UDim2.new(0, 72, 0, 95)
+UnCloak.Size = UDim2.new(0, 60, 0, 21)
+UnCloak.Font = Enum.Font.SourceSans
+UnCloak.FontSize = Enum.FontSize.Size14
+UnCloak.Text = "UnCloak"
+UnCloak.TextSize = 14
+ 
+UnCloakAll.Name = "UnCloakAll"
+UnCloakAll.Parent = PlayersTab
+UnCloakAll.BackgroundColor3 = Color3.new(1, 1, 1)
+UnCloakAll.Position = UDim2.new(0, 202, 0, 95)
+UnCloakAll.Size = UDim2.new(0, 60, 0, 21)
+UnCloakAll.Font = Enum.Font.SourceSans
+UnCloakAll.FontSize = Enum.FontSize.Size14
+UnCloakAll.Text = "UnCloakAll"
+UnCloakAll.TextSize = 14
+ 
+RRadios.Name = "RRadios"
+RRadios.Parent = PlayersTab
+RRadios.BackgroundColor3 = Color3.new(1, 1, 1)
+RRadios.Position = UDim2.new(0, 6, 0, 218)
+RRadios.Size = UDim2.new(0, 200, 0, 16)
+RRadios.Font = Enum.Font.SourceSans
+RRadios.FontSize = Enum.FontSize.Size14
+RRadios.Text = "Remove Everyones Radio Permanently"
+RRadios.TextSize = 14
+ 
+CrashS.Name = "CrashS"
+CrashS.Parent = PlayersTab
+CrashS.BackgroundColor3 = Color3.new(1, 1, 1)
+CrashS.Position = UDim2.new(0, 6, 0, 193)
+CrashS.Size = UDim2.new(0, 74, 0, 20)
+CrashS.Font = Enum.Font.SourceSans
+CrashS.FontSize = Enum.FontSize.Size14
+CrashS.Text = "Crash Server"
+CrashS.TextSize = 14
+ 
+God.Name = "God"
+God.Parent = PlayersTab
+God.BackgroundColor3 = Color3.new(1, 1, 1)
+God.Position = UDim2.new(0, 6, 0, 167)
+God.Size = UDim2.new(0, 45, 0, 21)
+God.Font = Enum.Font.SourceSans
+God.FontSize = Enum.FontSize.Size14
+God.Text = "God"
+God.TextSize = 14
+ 
+RemoveAnti.Name = "RemoveAnti"
+RemoveAnti.Parent = PlayersTab
+RemoveAnti.BackgroundColor3 = Color3.new(1, 1, 1)
+RemoveAnti.Position = UDim2.new(0, 154, 0, 6)
+RemoveAnti.Size = UDim2.new(0, 104, 0, 19)
+RemoveAnti.Font = Enum.Font.SourceSans
+RemoveAnti.FontSize = Enum.FontSize.Size14
+RemoveAnti.Text = "Remove Anti-Cheat"
+RemoveAnti.TextSize = 14
+ 
+STOPALL.Name = "STOPALL"
+STOPALL.Parent = PlayersTab
+STOPALL.BackgroundColor3 = Color3.new(1, 0, 0)
+STOPALL.Position = UDim2.new(0, 61, 0, 73)
+STOPALL.Size = UDim2.new(0, 46, 0, 17)
+STOPALL.Font = Enum.Font.SourceSans
+STOPALL.FontSize = Enum.FontSize.Size14
+STOPALL.Text = "STOP ALL"
+STOPALL.TextSize = 14
+ 
+STOP.Name = "STOP"
+STOP.Parent = PlayersTab
+STOP.BackgroundColor3 = Color3.new(1, 0, 0)
+STOP.Position = UDim2.new(0, 61, 0, 51)
+STOP.Size = UDim2.new(0, 37, 0, 17)
+STOP.Font = Enum.Font.SourceSans
+STOP.FontSize = Enum.FontSize.Size14
+STOP.Text = "STOP"
+STOP.TextSize = 14
+ 
+DetectRoles.Name = "DetectRoles"
+DetectRoles.Parent = PlayersTab
+DetectRoles.BackgroundColor3 = Color3.new(1, 1, 1)
+DetectRoles.Position = UDim2.new(0, 154, 0, 30)
+DetectRoles.Size = UDim2.new(0, 104, 0, 19)
+DetectRoles.Font = Enum.Font.SourceSans
+DetectRoles.FontSize = Enum.FontSize.Size14
+DetectRoles.Text = "Detect Roles"
+DetectRoles.TextSize = 14
+ 
+PlayerName.Name = "PlayerName"
+PlayerName.Parent = PlayersTab
+PlayerName.BackgroundColor3 = Color3.new(1, 1, 1)
+PlayerName.Position = UDim2.new(0, 6, 0, 28)
+PlayerName.Size = UDim2.new(0, 95, 0, 18)
+PlayerName.Font = Enum.Font.SourceSans
+PlayerName.FontSize = Enum.FontSize.Size14
+PlayerName.Text = "PLAYER NAME"
+PlayerName.TextSize = 14
+ 
+PLAYALL.Name = "PLAYALL"
+PLAYALL.Parent = PlayersTab
+PLAYALL.BackgroundColor3 = Color3.new(0, 0.666667, 0)
+PLAYALL.Position = UDim2.new(0, 6, 0, 73)
+PLAYALL.Size = UDim2.new(0, 46, 0, 17)
+PLAYALL.Font = Enum.Font.SourceSans
+PLAYALL.FontSize = Enum.FontSize.Size14
+PLAYALL.Text = "PLAY ALL"
+PLAYALL.TextSize = 14
+ 
+PLAY.Name = "PLAY"
+PLAY.Parent = PlayersTab
+PLAY.BackgroundColor3 = Color3.new(0, 0.666667, 0)
+PLAY.Position = UDim2.new(0, 7, 0, 51)
+PLAY.Size = UDim2.new(0, 37, 0, 17)
+PLAY.Font = Enum.Font.SourceSans
+PLAY.FontSize = Enum.FontSize.Size14
+PLAY.Text = "PLAY"
+PLAY.TextSize = 14
+ 
+MUSICid.Name = "MUSICid"
+MUSICid.Parent = PlayersTab
+MUSICid.BackgroundColor3 = Color3.new(1, 1, 1)
+MUSICid.Position = UDim2.new(0, 6, 0, 6)
+MUSICid.Size = UDim2.new(0, 95, 0, 18)
+MUSICid.Font = Enum.Font.SourceSans
+MUSICid.FontSize = Enum.FontSize.Size14
+MUSICid.Text = "MUSIC ID"
+MUSICid.TextSize = 14
+ 
+KillOthers.Name = "KillOthers"
+KillOthers.Parent = PlayersTab
+KillOthers.BackgroundColor3 = Color3.new(1, 1, 1)
+KillOthers.Position = UDim2.new(0, 125, 0, 142)
+KillOthers.Size = UDim2.new(0, 54, 0, 20)
+KillOthers.Font = Enum.Font.SourceSans
+KillOthers.FontSize = Enum.FontSize.Size14
+KillOthers.Text = "Kill Others"
+KillOthers.TextSize = 14
+ 
+KillAll.Name = "KillAll"
+KillAll.Parent = PlayersTab
+KillAll.BackgroundColor3 = Color3.new(1, 1, 1)
+KillAll.Position = UDim2.new(0, 66, 0, 142)
+KillAll.Size = UDim2.new(0, 54, 0, 20)
+KillAll.Font = Enum.Font.SourceSans
+KillAll.FontSize = Enum.FontSize.Size14
+KillAll.Text = "Kill All"
+KillAll.TextSize = 14
+ 
+Kill.Name = "Kill"
+Kill.Parent = PlayersTab
+Kill.BackgroundColor3 = Color3.new(1, 1, 1)
+Kill.Position = UDim2.new(0, 6, 0, 142)
+Kill.Size = UDim2.new(0, 54, 0, 20)
+Kill.Font = Enum.Font.SourceSans
+Kill.FontSize = Enum.FontSize.Size14
+Kill.Text = "Kill"
+Kill.TextSize = 14
+ 
+LoopKill.Name = "LoopKill"
+LoopKill.Parent = PlayersTab
+LoopKill.BackgroundColor3 = Color3.new(1, 1, 1)
+LoopKill.Position = UDim2.new(0, 184, 0, 142)
+LoopKill.Size = UDim2.new(0, 54, 0, 20)
+LoopKill.Font = Enum.Font.SourceSans
+LoopKill.FontSize = Enum.FontSize.Size14
+LoopKill.Text = "LoopKil"
+LoopKill.TextSize = 14
+ 
+ForceKevlar.Name = "ForceKevlar"
+ForceKevlar.Parent = PlayersTab
+ForceKevlar.BackgroundColor3 = Color3.new(1, 1, 1)
+ForceKevlar.Position = UDim2.new(0, 6, 0, 121)
+ForceKevlar.Size = UDim2.new(0, 126, 0, 16)
+ForceKevlar.Font = Enum.Font.SourceSans
+ForceKevlar.FontSize = Enum.FontSize.Size14
+ForceKevlar.Text = "Force Kevlar"
+ForceKevlar.TextSize = 14
+ 
+CloakAll.Name = "CloakAll"
+CloakAll.Parent = PlayersTab
+CloakAll.BackgroundColor3 = Color3.new(1, 1, 1)
+CloakAll.Position = UDim2.new(0, 137, 0, 95)
+CloakAll.Size = UDim2.new(0, 60, 0, 21)
+CloakAll.Font = Enum.Font.SourceSans
+CloakAll.FontSize = Enum.FontSize.Size14
+CloakAll.Text = "CloakAll"
+CloakAll.TextSize = 14
+ 
+Cloak.Name = "Cloak"
+Cloak.Parent = PlayersTab
+Cloak.BackgroundColor3 = Color3.new(1, 1, 1)
+Cloak.Position = UDim2.new(0, 6, 0, 95)
+Cloak.Size = UDim2.new(0, 60, 0, 21)
+Cloak.Font = Enum.Font.SourceSans
+Cloak.FontSize = Enum.FontSize.Size14
+Cloak.Text = "Cloak"
+Cloak.TextSize = 14
+ 
+ToolName.Name = "ToolName"
+ToolName.Parent = PlayersTab
+ToolName.BackgroundColor3 = Color3.new(1, 1, 1)
+ToolName.Position = UDim2.new(0, 132, 0, 54)
+ToolName.Size = UDim2.new(0, 69, 0, 19)
+ToolName.Font = Enum.Font.SourceSans
+ToolName.FontSize = Enum.FontSize.Size14
+ToolName.Text = "Tool Name"
+ToolName.TextSize = 14
+ 
+SaveTool.Name = "SaveTool"
+SaveTool.Parent = PlayersTab
+SaveTool.BackgroundColor3 = Color3.new(1, 1, 1)
+SaveTool.Position = UDim2.new(0, 206, 0, 54)
+SaveTool.Size = UDim2.new(0, 54, 0, 19)
+SaveTool.Font = Enum.Font.SourceSans
+SaveTool.FontSize = Enum.FontSize.Size14
+SaveTool.Text = "Save Tool"
+SaveTool.TextSize = 14
+ 
+StayL.Name = "StayL"
+StayL.Parent = PlayersTab
+StayL.BackgroundColor3 = Color3.new(1, 1, 1)
+StayL.Position = UDim2.new(0, 97, 0, 169)
+StayL.Size = UDim2.new(0, 139, 0, 20)
+StayL.Font = Enum.Font.SourceSans
+StayL.FontSize = Enum.FontSize.Size14
+StayL.Text = "Stay In Lobby Next Round"
+StayL.TextSize = 14
+ 
+ 
+OpenGui.MouseButton1Down:connect(function()
+	game.CoreGui.TwistedMurdererGUI.Opening.Visible = false
+	game.CoreGui.TwistedMurdererGUI.TMGui.Visible = true
+end)
+ 
+CLOSE.MouseButton1Down:connect(function()
+	game.CoreGui.TwistedMurdererGUI.Opening.Visible = true
+	game.CoreGui.TwistedMurdererGUI.TMGui.Visible = false
+end)
+ 
+PLAY.MouseButton1Down:connect(function()
+	game.ReplicatedStorage.Event:FireServer("PlayRadio", game.Players[PlayerName.Text], MUSICid.Text)
+end)
+ 
+STOP.MouseButton1Down:connect(function()
+	game.ReplicatedStorage.Event:FireServer("StopRadio", game.Players[PlayerName.Text])
+end)
+ 
+Cloak.MouseButton1Down:connect(function()
+	game.ReplicatedStorage.Event:FireServer("Cloak", game.Workspace.Ignore.Players[PlayerName.Text])
+end)
+ 
+UnCloak.MouseButton1Down:connect(function()
+	game.ReplicatedStorage.Event:FireServer("UnCloak", game.Workspace.Ignore.Players[PlayerName.Text])
+end)
+ 
+CloakAll.MouseButton1Down:connect(function()
+	for i,v in pairs(game.Players:GetChildren()) do
+	game.ReplicatedStorage.Event:FireServer("Cloak", game.Workspace.Ignore.Players[v.Name])
+	end
+end)
+ 
+ForceKevlar.MouseButton1Down:connect(function()
+	game.ReplicatedStorage.Event:FireServer("TPD", -100, game.Workspace.Ignore.Players[PlayerName.Text].Humanoid)
+end)
+ 
+PLAYALL.MouseButton1Down:connect(function()
+	for i,v in pairs(game.Players:GetChildren()) do
+	game.ReplicatedStorage.Event:FireServer("PlayRadio", v, MUSICid.Text)
+	end
+end)
+ 
+STOPALL.MouseButton1Down:connect(function()
+	for i,v in pairs(game.Players:GetChildren()) do
+	game.ReplicatedStorage.Event:FireServer("StopRadio", v)
+	end
+end)
+ 
+Kill.MouseButton1Down:connect(function()
+	game.ReplicatedStorage.Event:FireServer("TPD", 20000, game.Workspace.Ignore.Players[PlayerName.Text].Humanoid)
+end)
+ 
+KillAll.MouseButton1Down:connect(function()
+	for i,v in pairs(game.Players:GetChildren()) do
+	game.ReplicatedStorage.Event:FireServer("TPD", 20000, game.Workspace.Ignore.Players[v.Name].Humanoid)
+	end
+end)
+ 
+KillOthers.MouseButton1Down:connect(function()
+	for i,v in pairs(game.Players:GetChildren()) do
+	game.ReplicatedStorage.Event:FireServer("TPD", -20000, game.Workspace.Ignore.Players[PlayerName.Text].Humanoid)
+	game.ReplicatedStorage.Event:FireServer("TPD", 20000, game.Workspace.Ignore.Players[v.Name].Humanoid)
+	end
+end)
+ 
+SaveTool.MouseButton1Down:connect(function()
+	game.Players.LocalPlayer.Backpack[ToolName.Text].Parent = game.Players.LocalPlayer.StarterGear
+end)
+ 
+UnCloakAll.MouseButton1Down:connect(function()
+	for i,v in pairs(game.Players:GetChildren()) do
+	game.ReplicatedStorage.Event:FireServer("UnCloak", game.Workspace.Ignore.Players[v.Name])
+	end
+end)
+ 
+LoopKill.MouseButton1Down:connect(function()
+	while true do
+	wait(1.5)
+	game.ReplicatedStorage.Event:FireServer("TPD", 20000, game.Workspace.Ignore.Players[PlayerName.Text].Humanoid)
+	end
+end)
+ 
+DetectRoles.MouseButton1Down:connect(function()
+	while wait(1) do
+	for i,v in pairs(game.Players:GetChildren()) do
+	if game.Players[v.Name].Character:FindFirstChild("Role") then
+	local role = game.Players[v.Name].Character:FindFirstChild("Role")
+	if role.Value == "Murderer" then
+	game.CoreGui.RobloxGui.PlayerListContainer.ScrollList[v.Name].BGFrame.PlayerName.TextColor3 = Color3.new(1, 0, 0)
+	elseif role.Value == "Sheriff" then
+	game.CoreGui.RobloxGui.PlayerListContainer.ScrollList[v.Name].BGFrame.PlayerName.TextColor3 = Color3.new(1, 170/255, 0)
+	elseif role.Value == "Innocent" then
+	game.CoreGui.RobloxGui.PlayerListContainer.ScrollList[v.Name].BGFrame.PlayerName.TextColor3 = Color3.new(0, 1, 0)
+	else
+	game.CoreGui.RobloxGui.PlayerListContainer.ScrollList[v.Name].BGFrame.PlayerName.TextColor3 = Color3.new(1, 1, 1)
+	end
+	end
+	end
+	end
+end)
+ 
+RemoveAnti.MouseButton1Down:connect(function()
+	antiKek={'AntiSpeedHack','AntiDataTheft','UI','NO FF','NO FF'}
+ 
+	while wait() do
+	local Player = game.Players.LocalPlayer
+	local Gui = Player.PlayerGui
+	for i,v in pairs(antiKek) do
+	if Gui:FindFirstChild(v) then
+	Gui:FindFirstChild(v):Remove()
+	end
+	end
+	end
+end)
+ 
+CrashS.MouseButton1Down:connect(function()
+	while true do
+	wait()
+	for i,v in pairs(game.Players:GetChildren()) do
+	game.ReplicatedStorage.Event:FireServer("PlayRadio", v, 491150071)
+	end
+	end
+end)
+ 
+RRadios.MouseButton1Down:connect(function()
+	while true do
+	wait(1.5)
+	for i,v in pairs(game.Players:GetChildren()) do
+	game.ReplicatedStorage.Event:FireServer("StopRadio", v)
+	end
+	end
+end)
+ 
+God.MouseButton1Down:connect(function()
+	game.ReplicatedStorage.Event:FireServer("TPD", -888888888899999, game.Workspace.Ignore.Players[PlayerName.Text].Humanoid)
+end)
+ 
+StayL.MouseButton1Down:connect(function()
+	game.ReplicatedStorage.Event:FireServer("Equip", "None", "Perks")
+	game.ReplicatedStorage.Event:FireServer("TPD", 99.9, game.Workspace.Ignore.Players[PlayerName.Text].Humanoid)
+end)
+ 
+--Fe Gui Script
+local version = 'V.1'
+local MENU = Instance.new("ScreenGui")
+local Topbar = Instance.new("Frame")
+local exit = Instance.new("TextButton")
+local menu = Instance.new("Frame")
+local kill = Instance.new("TextButton")
+local killall = Instance.new("TextButton")
+local loopkill = Instance.new("TextButton")
+local god = Instance.new("TextButton")
+local victim = Instance.new("TextBox")
+local goto = Instance.new("TextButton")
+local float = Instance.new("TextButton")
+local TextLabel = Instance.new("TextLabel")
+MENU.Name = "MENU"
+MENU.Parent = game.CoreGui
+Topbar.Name = "Topbar"
+Topbar.Parent = MENU
+Topbar.Active = true
+Topbar.BackgroundColor3 = Color3.new(0.333333, 0.666667, 1)
+Topbar.BorderSizePixel = 0
+Topbar.Draggable = true
+Topbar.Position = UDim2.new(0.5, -100, 0.5, -13)
+Topbar.Selectable = true
+Topbar.Size = UDim2.new(0, 200, 0, 27)
+exit.Name = "exit"
+exit.Parent = Topbar
+exit.BackgroundColor3 = Color3.new(1, 1, 1)
+exit.BackgroundTransparency = 1
+exit.Position = UDim2.new(0, 163, 0, 0)
+exit.Size = UDim2.new(0, 37, 0, 27)
+exit.Font = Enum.Font.Arial
+exit.FontSize = Enum.FontSize.Size18
+exit.Text = "X"
+exit.TextColor3 = Color3.new(1, 1, 1)
+exit.TextSize = 18
+menu.Name = "menu"
+menu.Parent = Topbar
+menu.BackgroundColor3 = Color3.new(1, 1, 1)
+menu.BorderSizePixel = 0
+menu.Position = UDim2.new(0, 0, 0, 27)
+menu.Size = UDim2.new(0, 200, 0, 232)
+kill.Name = "kill"
+kill.Parent = menu
+kill.BackgroundColor3 = Color3.new(0.333333, 0.666667, 1)
+kill.BorderSizePixel = 0
+kill.Position = UDim2.new(0, 14, 0, 45)
+kill.Size = UDim2.new(0, 80, 0, 50)
+kill.Font = Enum.Font.Arial
+kill.FontSize = Enum.FontSize.Size18
+kill.Text = "Kill"
+kill.TextColor3 = Color3.new(1, 1, 1)
+kill.TextSize = 18
+killall.Name = "killall"
+killall.Parent = menu
+killall.BackgroundColor3 = Color3.new(0.333333, 0.666667, 1)
+killall.BorderSizePixel = 0
+killall.Position = UDim2.new(0, 107, 0, 45)
+killall.Size = UDim2.new(0, 80, 0, 50)
+killall.Font = Enum.Font.Arial
+killall.FontSize = Enum.FontSize.Size18
+killall.Text = "Kill All"
+killall.TextColor3 = Color3.new(1, 1, 1)
+killall.TextSize = 18
+loopkill.Name = "loopkill"
+loopkill.Parent = menu
+loopkill.BackgroundColor3 = Color3.new(0.333333, 0.666667, 1)
+loopkill.BorderSizePixel = 0
+loopkill.Position = UDim2.new(0, 14, 0, 110)
+loopkill.Size = UDim2.new(0, 80, 0, 50)
+loopkill.Font = Enum.Font.Arial
+loopkill.FontSize = Enum.FontSize.Size18
+loopkill.Text = "Loop Kill"
+loopkill.TextColor3 = Color3.new(1, 1, 1)
+loopkill.TextSize = 18
+god.Name = "god"
+god.Parent = menu
+god.BackgroundColor3 = Color3.new(0.333333, 0.666667, 1)
+god.BorderSizePixel = 0
+god.Position = UDim2.new(0, 107, 0, 110)
+god.Size = UDim2.new(0, 80, 0, 50)
+god.Font = Enum.Font.Arial
+god.FontSize = Enum.FontSize.Size18
+god.Text = "God"
+god.TextColor3 = Color3.new(1, 1, 1)
+god.TextSize = 18
+god.TextWrapped = true
+victim.Name = "victim"
+victim.Parent = menu
+victim.BackgroundColor3 = Color3.new(1, 1, 1)
+victim.BorderColor3 = Color3.new(0.333333, 0.666667, 1)
+victim.BorderSizePixel = 2
+victim.Position = UDim2.new(0, 16, 0, 10)
+victim.Size = UDim2.new(0, 170, 0, 25)
+victim.Font = Enum.Font.Arial
+victim.FontSize = Enum.FontSize.Size14
+victim.Text = "Player Name"
+victim.TextColor3 = Color3.new(0.333333, 0.666667, 1)
+victim.TextSize = 14
+goto.Name = "goto"
+goto.Parent = menu
+goto.BackgroundColor3 = Color3.new(0.333333, 0.666667, 1)
+goto.BorderSizePixel = 0
+goto.Position = UDim2.new(0, 14, 0, 172)
+goto.Size = UDim2.new(0, 80, 0, 50)
+goto.Font = Enum.Font.Arial
+goto.FontSize = Enum.FontSize.Size18
+goto.Text = "Goto"
+goto.TextColor3 = Color3.new(1, 1, 1)
+goto.TextSize = 18
+float.Name = "float"
+float.Parent = menu
+float.BackgroundColor3 = Color3.new(0.333333, 0.666667, 1)
+float.BorderSizePixel = 0
+float.Position = UDim2.new(0, 107, 0, 172)
+float.Size = UDim2.new(0, 80, 0, 50)
+float.Font = Enum.Font.Arial
+float.FontSize = Enum.FontSize.Size18
+float.Text = "Floating Torso"
+float.TextColor3 = Color3.new(1, 1, 1)
+float.TextSize = 18
+float.TextWrapped = true
+TextLabel.Parent = Topbar
+TextLabel.BackgroundColor3 = Color3.new(1, 1, 1)
+TextLabel.BackgroundTransparency = 1
+TextLabel.Position = UDim2.new(0, 43, 0, 0)
+TextLabel.Size = UDim2.new(0, 115, 0, 27)
+TextLabel.Font = Enum.Font.Arial
+TextLabel.FontSize = Enum.FontSize.Size18
+TextLabel.Text = "Stick v1"
+TextLabel.TextColor3 = Color3.new(1, 1, 1)
+TextLabel.TextSize = 18
+goto.MouseButton1Click:connect(function()
+   game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(game.Players:FindFirstChild(victim.Text).Character.HumanoidRootPart.Position)
+end)
+kill.MouseButton1Click:connect(function()
+	local target = game.Players:FindFirstChild(victim.Text)
+    target:Move(Vector3.new(math.huge,math.huge,math.huge))
+end)
+killall.MouseButton1Click:connect(function()
+	for i,v in pairs(game.Players:GetChildren()) do
+v:Move(Vector3.new(math.huge,math.huge,math.huge))
+end
+end)
+loopkill.MouseButton1Click:connect(function()
+	while true do
+	local target = game.Players:FindFirstChild(victim.Text)
+    target:Move(Vector3.new(math.huge,math.huge,math.huge))
+wait()
+end
+end)
+god.MouseButton1Click:connect(function()
+game.Players.LocalPlayer.Character.Humanoid.Name = 1
+local l = game.Players.LocalPlayer.Character["1"]:Clone()
+l.Parent = game.Players.LocalPlayer.Character
+l.Name = "Humanoid"
+wait(0.1)
+game.Players.LocalPlayer.Character["1"]:Destroy()
+game.Workspace.CurrentCamera.CameraSubject = game.Players.LocalPlayer.Character
+game.Players.LocalPlayer.Character.Animate.Disabled = true
+wait(0.1)
+game.Players.LocalPlayer.Character.Animate.Disabled = false
+game.Players.LocalPlayer.Character.Humanoid.DisplayDistanceType = "None"
+end)
+float.MouseButton1Click:connect(function()
+	local Weld1 = Instance.new("Weld", game.Players.LocalPlayer.Character.Torso)
+Weld1.Part0 = game.Players.LocalPlayer.Character.Head
+Weld1.Part1 = game.Players.LocalPlayer.Character.Torso
+local Weld2 = Instance.new("Weld", game.Players.LocalPlayer.Character.Torso)
+Weld2.Part0 = game.Players.LocalPlayer.Character["Left Arm"]
+Weld2.Part1 = game.Players.LocalPlayer.Character.Torso
+local Weld3 = Instance.new("Weld", game.Players.LocalPlayer.Character.Torso)
+Weld3.Part0 = game.Players.LocalPlayer.Character["Right Arm"]
+Weld3.Part1 = game.Players.LocalPlayer.Character.Torso
+local Weld4 = Instance.new("Weld", game.Players.LocalPlayer.Character.Torso)
+Weld4.Part0 = game.Players.LocalPlayer.Character["Right Leg"]
+Weld4.Part1 = game.Players.LocalPlayer.Character.Torso
+local Weld5 = Instance.new("Weld", game.Players.LocalPlayer.Character.Torso)
+Weld5.Part0 = game.Players.LocalPlayer.Character["Left Leg"]
+Weld5.Part1 = game.Players.LocalPlayer.Character.Torso
+end)
+exit.MouseButton1Click:connect(function()
+	MENU:remove()
+    warn("Goodbye, "..game.Players.LocalPlayer.Name)
+	warn("Stick "..version.." was Closed")
+end)
